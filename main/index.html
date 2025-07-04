@@ -16,9 +16,12 @@
   </head>
 
   <body>
-    <div id="container">
-      <div id="navigation-bar">
-        <ul>
+    <div id="container" class="bg-[#272640] p-11 text-white">
+      <div
+        id="navigation-bar"
+        class="border-2 border-[#006466] bg-[#4D194D] p-4 rounded-md flex"
+      >
+        <ul class="flex justify-evenly w-full text-white text-lg font-bold">
           <li><a href="">Home</a></li>
           <li><a href="">About</a></li>
           <li><a href="">Skills</a></li>
@@ -29,22 +32,83 @@
 
       <br />
 
-      <div>
-        <img src="yogurt.jpg" alt="" />
-      </div>
+      <div
+        id="hero-section"
+        class="flex justify-center border-2 border-[#006466] items-center p-10 bg-gray-500 rounded-lg"
+      >
+        <div id="profile-img" class="mr-10">
+          <img
+            src="yogurt.jpg"
+            alt="Profile Image"
+            class="w-80 rounded-full object-cover border-4 border-[#006466] shadow-md bg-round"
+          />
+        </div>
 
-      <div id="hero-seciton">
-        <h1 id="name">Hello I'm Marlou</h1>
-        <p id="description">
-          I am a 3rd Year IT Student. I am currently studying Software
-          Engineering. I am passionate about programming and I love to learn new
-          things. I am currently learning tailwindcss with the hopes of learning
-          reactjs and javascript.
-        </p>
+        <div id="about">
+          <h1 id="name" class="text-4xl font-bold mb-10">Hello, I'm Marlou</h1>
+          <p id="description">
+            I am a 3rd Year IT Student. I am currently studying and learning Web
+            Development and Software Engineering. I am passionate about
+            programming and I love to learn new things. I am currently learning
+            tailwind css with the hopes of learning reactjs and javascript in
+            the future.
+          </p>
+        </div>
       </div>
 
       <br />
 
+      <div
+        id="skills"
+        class="border-2 border-[#006466] p-10 rounded-lg bg-[#3E1F47] text-white"
+      >
+        <h2 class="text-2xl font-bold mb-6 text-center">Tech Stack</h2>
+
+        <div class="flex justify-center space-x-48 mb-6">
+          <!-- Frontend Tab -->
+          <div class="group relative">
+            <button
+              class="text-6xl font-bold border-2 border-[#006466] rounded-lg px-8 py-4"
+            >
+              Frontend
+            </button>
+            <ul
+              class="absolute top-full mt-3 w-64 bg-[#3E1F47] p-5 rounded-lg shadow-lg space-y-3 opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-300 ease-in-out origin-top"
+            >
+              <li class="text-lg bg-[#006466] px-4 py-2 rounded">HTML5</li>
+              <li class="text-lg bg-[#006466] px-4 py-2 rounded">CSS3</li>
+              <li class="text-lg bg-[#006466] px-4 py-2 rounded">
+                Tailwind CSS
+              </li>
+              <li class="text-lg bg-[#006466] px-4 py-2 rounded">
+                Responsive Design
+              </li>
+            </ul>
+          </div>
+
+          <!-- Backend Tab -->
+          <div class="group relative">
+            <button
+              class="text-6xl font-bold border-2 border-[#006466] rounded-lg px-8 py-4"
+            >
+              Backend
+            </button>
+            <ul
+              class="absolute top-full mt-3 w-64 bg-[#3E1F47] p-5 rounded-lg shadow-lg space-y-3 opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-300 ease-in-out origin-top"
+            >
+              <li class="text-lg bg-[#006466] px-4 py-2 rounded">
+                PHP (Vanilla)
+              </li>
+              <li class="text-lg bg-[#006466] px-4 py-2 rounded">MySQL</li>
+              <li class="text-lg bg-[#006466] px-4 py-2 rounded">
+                Session Auth
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <br />
       <div id="projects">
         <h2>Projects</h2>
         <div class="project">
