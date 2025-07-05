@@ -34,6 +34,8 @@ A retro-inspired portfolio site styled like a file explorer, with folders users 
 - Transitions handled with Tailwind’s `max-height` and `opacity` utilities
 - Large button text for the folder-style design
 
-## Author
+## Credits
 
-@desciii
+Developed by **@desciii**
+
+---
