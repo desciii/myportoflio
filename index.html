@@ -25,13 +25,26 @@
       button {
         font-size: 82px;
       }
+      #toggle {
+        font-size: 15px;
+      }
     </style>
   </head>
-  <body class="bg-black text-white">
+  <body class="bg-black text-white transition-colors duration-1000">
     <div id="container" class="min-h-screen p-10">
       <header class="text-center pb-40">
-        <h1 class="text-white text-6xl">👾 Marlou's Portfolio</h1>
-        <p class="text-white text-3xl mt-2">
+        <div class="flex justify-end mb-4">
+          <button
+            onclick="toggleDarkMode()"
+            class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-md transition-colors duration-1000 flex items-center gap-2"
+            id="toggle"
+          >
+            <i id="theme-icon" class="fas fa-sun"></i>
+            <span id="theme-text">Light Mode</span>
+          </button>
+        </div>
+        <h1 class="text-6xl">👾 Marlou's Portfolio</h1>
+        <p class="text-3xl mt-2">
           3rd Year IT Student | Web Dev & Software Eng
         </p>
       </header>
@@ -40,7 +53,7 @@
         <div>
           <button
             onclick="toggleFolder('aboutContent')"
-            class="flex items-center gap-2 hover:underline"
+            class="flex items-center gap-2 hover:underline hover:scale-105 transition-transform duration-200"
           >
             <i class="fas fa-folder text-yellow-400"></i>
             About Me
@@ -64,7 +77,7 @@
         <div>
           <button
             onclick="toggleFolder('skillsContent')"
-            class="flex items-center gap-2 hover:underline"
+            class="flex items-center gap-2 hover:underline hover:scale-105 transition-transform duration-200"
           >
             <i class="fas fa-folder text-yellow-400"></i>
             Skills
@@ -87,7 +100,7 @@
         <div>
           <button
             onclick="toggleFolder('projectsContent')"
-            class="flex items-center gap-2 hover:underline"
+            class="flex items-center gap-2 hover:underline hover:scale-105 transition-transform duration-200"
           >
             <i class="fas fa-folder text-yellow-400"></i>
             Projects
@@ -132,7 +145,7 @@
         <div>
           <button
             onclick="toggleFolder('contactContent')"
-            class="flex items-center gap-2 hover:underline"
+            class="flex items-center gap-2 hover:underline hover:scale-105 transition-transform duration-200"
           >
             <i class="fas fa-folder text-yellow-400"></i>
             Contact
@@ -167,6 +180,28 @@
         } else {
           section.classList.remove("max-h-0", "opacity-0");
           section.classList.add("max-h-[1000px]", "opacity-100");
+        }
+      }
+
+      function toggleDarkMode() {
+        const body = document.body;
+        const themeIcon = document.getElementById("theme-icon");
+        const themeText = document.getElementById("theme-text");
+
+        if (body.classList.contains("bg-black")) {
+          // Switch to light mode
+          body.classList.remove("bg-black", "text-white");
+          body.classList.add("bg-white", "text-black");
+          themeIcon.classList.remove("fa-sun");
+          themeIcon.classList.add("fa-moon");
+          themeText.textContent = "Dark Mode";
+        } else {
+          // Switch to dark mode
+          body.classList.remove("bg-white", "text-black");
+          body.classList.add("bg-black", "text-white");
+          themeIcon.classList.remove("fa-moon");
+          themeIcon.classList.add("fa-sun");
+          themeText.textContent = "Light Mode";
         }
       }
     </script>
