@@ -1,4 +1,8 @@
-# Marlou's Portfolio
+# MP
+
+A Side Project named My Portfolio - Considered Finished
+
+# My Portfolio
 
 A retro-inspired portfolio site styled like a file explorer, with folders users can click to reveal content such as About Me, Skills, Projects, and Contact.
 
