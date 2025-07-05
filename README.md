@@ -1,58 +1,35 @@
-# DP
+# Marlou's Portfolio
 
-A Personal Portfolio Project — In Progress
+A retro-inspired portfolio site styled like a file explorer, with folders users can click to reveal content such as About Me, Skills, Projects, and Contact.
 
-# Desciii Portfolio
+## Tech Stack
 
-A minimalist, responsive portfolio website built using Tailwind CSS. This is a personal side project to practice frontend design and UI development using utility-first styling. The project highlights core skills, past works, and contact details in a clean and mobile-friendly layout.
+- Tailwind CSS for styling and transitions
+- VT323 font for a terminal-style look
+- Font Awesome icons for folder visuals
+- Vanilla JavaScript for folder toggle logic
 
 ## Features
 
-- Responsive Layout (Mobile-first Design)
-- Hero Section with Name, Tagline & CTA
-- About Me Section
-- Projects Section (with cards)
-- Contact Section with Email Button
-- Footer with Copyright
-- Tailwind Utility Styling
-- Smooth hover transitions
-- Minimalist UI with good spacing and alignment
-- Option for Social Media Icons (GitHub, FB, etc.)
-- Easy to extend or customize
+- Minimal file-explorer UI with dropdown folders
+- Smooth open/close animations using Tailwind transitions
+- Responsive and clean layout
+- All content on a single page, no page reloads
 
-## Technologies Used
+## Sections
 
-- **Frontend:**
+- About Me – short intro, current studies, and interests
+- Skills – list of technologies and tools
+- Projects – links to GitHub repositories
+- Contact – email and GitHub link
 
-  - HTML5
-  - Tailwind CSS (via CDN)
-  - Google Fonts (optional)
+## Styling Highlights
 
-- **Other Tools:**
-  - Live Server (for real-time preview)
-  - Git/GitHub (for version control & deployment)
+- Font: [VT323](https://fonts.google.com/specimen/VT323)
+- Color theme: black background with white and red text
+- Transitions handled with Tailwind’s `max-height` and `opacity` utilities
+- Large button text for the folder-style design
 
-## Setup Instructions
+## Author
 
-1. **Clone or Download this repository** into your local folder.
-
-2. **Run Locally:**
-
-   - Open the `index.html` file directly in your browser  
-     **OR**
-   - Use Live Server (VS Code extension) for real-time changes
-
-3. **Customize the Content:**
-
-   - Edit name, sections, project info, and social links
-   - Add images, icons, or animations if desired
-
-4. **Deploy (Optional):**
-   - Upload to GitHub and enable GitHub Pages
-   - OR deploy via Netlify/Vercel (free hosting)
-
-## Credits
-
-Developed by **@desciii**
-
----
+@desciii
