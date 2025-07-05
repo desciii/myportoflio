@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>My Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      #container,
+      header {
+        font-family: "VT323", monospace;
+        font-size: 42px;
+        margin: 0 auto;
+        width: 100%;
+      }
+      button {
+        font-size: 82px;
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white">
+    <div id="container" class="min-h-screen p-10">
+      <header class="text-center pb-80">
+        <h1 class="text-white text-8xl">👾 Marlou's Portfolio</h1>
+        <p class="text-white text-4xl mt-2">
+          3rd Year IT Student | Web Dev & Software Eng
+        </p>
+      </header>
+      <div class="space-y-6 w-full max-w-3xl">
+        <!-- COMPONENT -->
+        <div>
+          <button
+            onclick="toggleFolder('aboutContent')"
+            class="flex items-center gap-2 hover:underline"
+          >
+            <i class="fas fa-folder text-yellow-400"></i>
+            About Me
+          </button>
+          <div
+            id="aboutContent"
+            class="ml-8 mt-2 max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out"
+          >
+            <p>
+              📄 I'm Marlou, a 3rd Year IT student passionate about Web Dev &
+              Software Engineering.
+            </p>
+            <p>
+              📄 Learning CSS, planning to dive into ReactJS and full stack
+              projects.
+            </p>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div>
+          <button
+            onclick="toggleFolder('skillsContent')"
+            class="flex items-center gap-2 hover:underline"
+          >
+            <i class="fas fa-folder text-yellow-400"></i>
+            Skills
+          </button>
+          <div
+            id="skillsContent"
+            class="ml-8 mt-2 max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out"
+          >
+            <ul class="list-disc pl-4">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Tailwind CSS</li>
+              <li>PHP & MySQL</li>
+              <li>Java</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div>
+          <button
+            onclick="toggleFolder('projectsContent')"
+            class="flex items-center gap-2 hover:underline"
+          >
+            <i class="fas fa-folder text-yellow-400"></i>
+            Projects
+          </button>
+          <div
+            id="projectsContent"
+            class="ml-8 mt-2 max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out"
+          >
+            <ul class="list-disc pl-4">
+              <li>
+                <a
+                  href="https://github.com/desciii/codeboard"
+                  target="_blank"
+                  class="text-red-400 hover:underline"
+                >
+                  Code Board — code-sharing app [PHP]
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/desciii/bogeypasswordmanager"
+                  target="_blank"
+                  class="text-red-400 hover:underline"
+                >
+                  Bogey's Password Manager [Java Swing]
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/desciii/myportoflio"
+                  target="_blank"
+                  class="text-red-400 hover:underline"
+                >
+                  This Portfolio (You're Lookin' at it) [Tailwind CSS & JS]
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <button
+            onclick="toggleFolder('contactContent')"
+            class="flex items-center gap-2 hover:underline"
+          >
+            <i class="fas fa-folder text-yellow-400"></i>
+            Contact
+          </button>
+          <div
+            id="contactContent"
+            class="ml-8 mt-2 max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out"
+          >
+            <p>📧 angelopanungcat@gmail.com</p>
+            <p>
+              <a
+                href="https://github.com/desciii"
+                target="_blank"
+                class="text-red-400 hover:underline"
+              >
+                💻 @desciii
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleFolder(id) {
+        const section = document.getElementById(id);
+        const isOpen = section.classList.contains("max-h-[1000px]");
+
+        if (isOpen) {
+          section.classList.remove("max-h-[1000px]", "opacity-100");
+          section.classList.add("max-h-0", "opacity-0");
+        } else {
+          section.classList.remove("max-h-0", "opacity-0");
+          section.classList.add("max-h-[1000px]", "opacity-100");
+        }
+      }
+    </script>
+  </body>
+</html>
